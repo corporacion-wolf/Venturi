@@ -92,7 +92,8 @@ void convertir_format(int a)
 
 ISR (TIMER1_COMPA_vect)
 {
-  caudal_1 = (-14.861 + 7.777 * pulsos_1);    // Ec. de regresion lineal sensor yf-s201
+  //caudal_1 = (-14.861 + 7.777 * pulsos_1);    // Ec. de regresion lineal sensor yf-s201
+  caudal_1 = (7.5 * pulsos_1);    // Ec. de datasheet lineal sensor yf-s201
   caudal_2 = (pulsos_2 * 0.6122);             // Ec. de datasheet sensor yf-s401 en l/h
 
   v1 = pulsos_1;
